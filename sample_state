@@ -1,0 +1,98 @@
+```js
+
+{
+  entities: {
+    users: {
+      11: {
+        id: 11,
+        team_id: 5,
+        username: "jhornacek",
+        email: "jeffhornacek@mycorp.com",
+        first_name: "Jeff",
+        last_name: "Hornacek"
+      },
+      25: {
+        id: 25,
+        team_id: 2,
+        username: "jstockton",
+        email: "johnstockton@mycorp.com",
+        first_name: "John",
+        last_name: "Stockton"
+      }
+    },
+
+    projects: {
+      1: {
+        id: 1,
+        owner_id: 11,
+        team_id: 4,
+        name: "Develop continuous integration tests for mobile apps",
+        completed: false,
+        description: "As part of the push to full Scrum, we need to be able to have automated CI testing",
+        due_date: 2021-11-01
+      },
+      2: {
+        id: 2,
+        owner_id: 6,
+        team_id: 7,
+        name: "Double marketing initiatives for EMEA region",
+        completed: false,
+        description: null,
+        due_date: 2020-03-15
+      },
+      3: {
+        id: 3,
+        owner_id: 25,
+        team_id: 2,
+        name: "Reach 50% market cap internationally",
+        completed: false,
+        description: "We need to increase our market cap by pushing our localization efforts.",
+        due_date: 2019-08-01
+      }
+    },
+
+    tasks: {
+      10: {
+        id: 10,
+        creator_id: 2,
+        assignee_id: 13,
+        project_id: 2,
+        name: "Onboard EMEA consulting contractors",
+        completed: true,
+        description: null,
+        due_date: 2019-06-31
+      },
+      11: {
+        id: 11,
+        creator_id: 25,
+        assignee_id: 25,
+        project_id: 1,
+        name: "Investigate Jenkins build failures",
+        completed: false,
+        description: "Strange build failures on Jenkins, we need to contact our system admin.",
+        due_date: 2020-01-15
+      },
+      12: {
+        id: 12,
+        creator_id: 14,
+        assignee_id: 43,
+        project_id: 3,
+        name: "Translate app content to Portuguese",
+        completed: true,
+        description: "We have 20% market share in Portugal, pushing Portuguese localization efforts will have an estimated +30% impact on market share.",
+        due_date: 2019-05-31
+      }
+    }
+  },
+
+  ui: {
+    loading: true/false
+  },
+
+  errors: {
+    session: ["Incorrect username/password combination"],
+    project: ["Project name cannot be blank"],
+  },
+
+  session: { currentUserId: 25 }
+}
